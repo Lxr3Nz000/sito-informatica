@@ -1,96 +1,247 @@
-/*Titolo*/
-.title {
+/* Titoli */
+.title,
+.titleHome {
     font-family: "Special Gothic Expanded One", sans-serif;
-    font-weight: 700;
     font-style: normal;
     text-align: center;
+    font-weight: 700;
 }
 
 .titleHome {
-    font-family: "Special Gothic Expanded One", sans-serif;
     margin: 10%;
     font-size: 300%;
-    font-weight: 300%;
-    font-style: normal;
-    text-align: center;
-
 }
 
-/*Navbar*/
+.carousel-container {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* imposta una larghezza minima */
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.responsive-table thead {
+  background-color: #333;
+  color: white;
+}
+
+
+
+/* Navbar */
 .navbarstyle {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400;
-    font-style: normal;
     text-align: center;
-    color: black;
     background-color: #00BFFF;
-
-    /*!Per levare le sottolineature*/
+    color: #f4f4f4;
     text-decoration: none;
-
-    /*!Se non li uso non metto gli spazi, padding tra il contenuto e il bordo, margin tra l’elemento e ciò che lo circonda */
     margin: 0 10px;
     padding: 8px 12px;
-
-    /* !Se non lo uso quando passo col cursore sopra la scritta trema tutto */
     border: 2px solid transparent;
     border-radius: 30px;
-
-    /*!Per non far sovrapporre le cose */
     display: flex;
-
-    /*!Per far restare gli elementi in una sola riga anche se si stringono troppo */
     flex-wrap: wrap;
-
-    /*!Per andare a capo con gli schermi piccoli automaticamente */
     justify-content: center;
-
-    /*!Se non lo uso gli elementi sono decentrati*/
     gap: 15px;
-
-    /*!Per far rimanere la navbar sopra quando scrollo */
-    top: 0;
     position: sticky;
+    top: 0;
+    z-index: 1;
+}
 
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
 
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 12px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.text-carousel-wrapper {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.text-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-bubble {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #00BFFF;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+    height: 150px;
+    box-sizing: border-box;
 
 }
 
-/*!Per far apparire il bordo quando ci passo con il cursore */
+.text-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #00BFFF transparent;
+}
+
+
+.text-carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.text-carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    pointer-events: all;
+    transition: background 0.3s;
+}
+
+.text-carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
 .navbarstyle a:hover {
     border: 2px solid black;
-
 }
 
-/*Linea orizzontale*/
+/* Linea orizzontale */
 hr {
     border: none;
     height: 2px;
     background-color: black;
     margin: 20px auto;
     width: 90%;
-
 }
 
-/*Testo*/
+/* Testo */
 .text {
     font-family: "Special Gothic Expanded One", sans-serif;
-    font-weight: 40%;
     font-style: normal;
     text-align: justify;
     margin: 3%;
-
 }
 
-
-/*Immagini*/
-.img {
+/* Immagini */
+.img,
+.img2 {
     border-radius: 3%;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
-
+.img2 {
+    margin-left: 2%;
+}
 
 .contenitore-immagini {
     display: flex;
@@ -105,8 +256,7 @@ hr {
     border-radius: 10px;
 }
 
-
-/*Footer*/
+/* Footer */
 .footer-style {
     font-family: "Special Gothic Expanded One", sans-serif;
     background-color: #00bfff5e;
@@ -123,18 +273,20 @@ hr {
     text-align: center;
 }
 
-
-.img2 {
-    border-radius: 3%;
-    display: block;
-    margin-left: 2%;
-}
-
+/* Layout con immagine e testo laterale */
 .box-foto-testo {
     display: flex;
     align-items: center;
     gap: 2%;
     padding: 2%;
+}
+
+.box-foto-testo img {
+    max-width: 100%;
+    width: 1500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .immagine-laterale-destro {
@@ -143,12 +295,16 @@ hr {
     border-radius: 30px;
 }
 
-.testo-laterale-destro {
-    margin-left: 10%;
+.testo-laterale-destro,
+.testo-laterale-sinistro {
     text-align: justify;
     max-width: 80%;
     font-size: 1.3em;
     color: #000;
+}
+
+.testo-laterale-destro {
+    margin-left: auto;
 }
 
 .immagine-laterale-sinistro {
@@ -160,19 +316,9 @@ hr {
 
 .testo-laterale-sinistro {
     margin: 3%;
-    text-align: justify;
-    max-width: 80%;
-    font-size: 1.3em;
-    color: #000;
 }
 
-.box-foto-testo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
+/* Responsive */
 @media screen and (max-width: 768px) {
     .titleHome {
         font-size: 2em;
@@ -192,7 +338,6 @@ hr {
         flex: 1;
         min-width: 280px;
         max-width: 600px;
-        text-align: justify;
         padding: 10px;
     }
 
