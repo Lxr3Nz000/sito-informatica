@@ -1,82 +1,346 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 
 <head>
-    <title>Scommesse Sportive</title>
+  <meta charset="UTF-8">
+  <title>Scommesse Sportive</title>
+  <link rel="icon" type="image/x-icon" href="icona.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap"
+    rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="icona.png">
+  <!-- CSS esterno -->
+  <link rel="stylesheet" href="style.css">
 
+  <!-- Stile carosello -->
+  <style>
+    .carousel-container {
+      max-width: 600px;
+      margin: 30px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap"
-        rel="stylesheet">
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
-
 <body>
-    <h1 class="title">SCOMMESSE SPORTIVE</h1>
+  <h1 class="title">SCOMMESSE SPORTIVE</h1>
 
-    <hr>
+  <hr>
 
-    <nav class="navbarstyle">
+  <nav class="navbarstyle">
+    <a class="navbarstyle" href="index.html" target="_blank">Home</a>
+    <a class="navbarstyle" href="ludopatia.html" target="_blank">Ludopatia</a>
+    <a class="navbarstyle" href="casino.html" target="_blank">Casinò</a>
+    <a class="navbarstyle" href="gratta.html" target="_blank">Gratta e Vinci</a>
+  </nav>
 
-        <a class="navbarstyle" href="index.html" target="_blank">Home</a>
-        <a class="navbarstyle" href="ludopatia.html" target="_blank">Ludopatia</a>
-        <a class="navbarstyle" href="casino.html" target="_blank">Casinò</a>
-        <a class="navbarstyle" href="gratta.html" target="_blank">Gratta e Vinci</a>
-    </nav>
+  <hr>
 
-    <hr>
+  <p class="text">
+    Le scommesse sportive sono dei giochi nei quali si puntano dei soldi su degli eventi sportivi come
+    partite di calcio, corse di cavalli, tennis o basket. Negli ultimi anni, grazie alla diffusione di internet e
+    delle app mobili, questo tipo di scommesse è diventato sempre più accessibile e popolare, soprattutto tra i
+    giovani.
+    Chi scommette può scegliere tra tante opzioni: il risultato finale, il numero di gol, il primo marcatore, se si
+    vince, se si perde, se si pareggia e molto
+    altro. Nonostante questo bisogna ricordare che si tratta comunque di un gioco d'azzardo e, come tale, può creare
+    dipendenza e portare a problemi economici o sociali se non gestito come si dovrebbe e quindi in modo
+    responsabile.
+  </p>
 
-    <p class="text">
-        Le scommesse sportive sono dei giochi nei quali si puntano dei soldi su degli eventi sportivi come
-        partite di calcio, corse di cavalli, tennis o basket. Negli ultimi anni, grazie alla diffusione di internet e
-        delle app mobili, questo tipo di scommesse è diventato sempre più accessibile e popolare, soprattutto tra i
-        giovani.
-        Chi scommette può scegliere tra tante opzioni: il risultato finale, il numero di gol, il primo marcatore, se si
-        vince, se si perde, se si pareggia e molto
-        altro. Nonostante questo bisogna ricordare che si tratta comunque di un gioco d'azzardo e, come tale, può creare
-        dipendenza e portare a problemi economici o sociali se non gestito come si dovrebbe e quindi in modo
-        responsabile.
-    </p>
-    <div class="contenitore-immagini">
-        <img src="sport_betting_it.jpg" alt="Scommesse" >
+  <!-- Carosello immagini -->
+  <div class="carousel-container">
+    <div class="carousel-slide" id="carouselSlide">
+      <img src="pengwin.jpg" alt="Immagine 1">
+      <img src="scommesse_sportive_.jpg" alt="Immagine 2">
+      <img src="sport_betting_it.jpg" alt="Immagine 3">
     </div>
-    <hr>
-
-    <p class="text">
-        Anche in questo caso, sono molti i minorenni che decidono di giocare senza considerare la regola del gioco
-        vietato ai minori di diciotto anni, magari perchè vedono sui social delle pubblicità ,nelle quali ,si dice che
-        con queste scommesse ci si guadagna per vivere o comunque ci si possono fare molti soldi, senza sapere però che
-        molte sono truffe; alcuni addirittura pagano dei professionisti chiamati tipster che vendono le loro giocate,
-        anche in questo caso molte perdenti, su canali telegram o altri social, e questo comporta un maggior dispendio
-        di soldi.
-        Addirittura possiamo trovare gente che questo lo fa come lavoro, come per esempio un tipster chiamato pengwin,
-        conosciutissimo dai giovani, proprietario del canale telegram di betting più grande d'Italia; lui, da
-        scommettitore, dice sempre di scommettere entro le proprie possibilità,
-        cosa che molte persone non riescono a fare perchè ormai malate di questi giochi e alla fine finiscono per
-        indebitarsi
-    </p>
-    <div class="contenitore-immagini">
-        <img src="pengwin.jpg" alt="tipster">
-        <img src="debiti-ok.jpg" alt="debiti">
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
     </div>
+  </div>
 
-    <footer class="footer-style">
-        <p>Nome e Cognome: Lorenzo Mangia</p>
-        <p>Classe: 4D</p>
-        <p>Sezione: Informatica</p>
-        <p>Email: lorenzomangia16@gmail.com</p>
-    </footer>
+
+  <hr>
+
+  <p class="text">
+    Anche in questo caso, sono molti i minorenni che decidono di giocare senza considerare la regola del gioco
+    vietato ai minori di diciotto anni, magari perché vedono sui social delle pubblicità nelle quali si dice che
+    con queste scommesse ci si guadagna per vivere o comunque ci si possono fare molti soldi, senza sapere però che
+    molte sono truffe; alcuni addirittura pagano dei professionisti chiamati tipster che vendono le loro giocate,
+    anche in questo caso molte perdenti, su canali Telegram o altri social, e questo comporta un maggior dispendio
+    di soldi.
+    Addirittura possiamo trovare gente che questo lo fa come lavoro, come per esempio un tipster chiamato Pengwin,
+    conosciutissimo dai giovani, proprietario del canale Telegram di betting più grande d'Italia; lui, da
+    scommettitore, dice sempre di scommettere entro le proprie possibilità,
+    cosa che molte persone non riescono a fare perché ormai malate di questi giochi e alla fine finiscono per
+    indebitarsi.
+  </p>
+
+  <hr>
+  <h1 class="title">TESTIMONIANZE</h1>
+
+
+
+  <div class="text-carousel-wrapper">
+    <div class="text-carousel-track" id="textCarouselTrack">
+      <div class="text-bubble">Marco, 32 anni – ex scommettitore compulsivo
+        "Tutto è iniziato per gioco, con una schedina la domenica. Poi ho iniziato a scommettere ogni giorno. Mi
+        sembrava di avere il controllo… finché ho perso tutto il mio stipendio in un weekend."</div>
+      <div class="text-bubble">Lucia, 41 anni – madre di due figli
+        "Avevo un lavoro stabile e una famiglia. Ma la dipendenza dalle slot machine mi ha rovinato. Nascondevo tutto,
+        anche ai miei figli. Solo quando ho toccato il fondo ho chiesto aiuto."</div>
+      <div class="text-bubble">Andrea, 24 anni – studente universitario
+        "All'inizio sembrava facile guadagnare. Seguivo i tipster su Telegram, sperando nel colpo grosso. In realtà, ho
+        solo accumulato debiti. Ho smesso quando ho rischiato di lasciare gli studi."</div>
+      <div class="text-bubble"> Giovanni, 57 anni – ex dipendente pubblico
+        "Pensavo che il gioco fosse un passatempo innocuo. Dopo anni di scommesse, ho perso la casa, il lavoro e la
+        fiducia della mia famiglia. Ora sono in terapia, ma la vergogna rimane."</div>
+      <div class="text-bubble">Chiara, 19 anni – liceale
+        "Avevo 16 anni quando ho iniziato con i Gratta e Vinci. Mi sembrava innocuo. Ora, ogni volta che vedo una
+        tabaccheria, sento il bisogno di giocare. Sto cercando di uscirne."
+
+      </div>
+    </div>
+    <div class="text-carousel-nav">
+      <button onclick="prevTextSlide()">&#10094;</button>
+      <button onclick="nextTextSlide()">&#10095;</button>
+    </div>
+  </div>
+
+  <h2 class="title">Esempi di Giocate e Quote</h2>
+  <div class="responsive-table">
+    <table style="width: 90%; margin: 20px auto; border-collapse: collapse; font-family: 'Exo 2', sans-serif;">
+      <thead style="background-color: #333; color: white;">
+        <tr>
+          <th style="padding: 10px; border: 1px solid #ddd;">Partita</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">1X2</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">Over 2.5</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">Under 2.5</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">Gol</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">No Gol</th>
+          <th style="padding: 10px; border: 1px solid #ddd;">Primo Marcatore</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #f2f2f2;">
+          <td style="padding: 10px; border: 1px solid #ddd;">Milan vs Juventus</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1: 2.40 – X: 3.10 – 2: 2.80</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.85</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.90</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.75</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">2.00</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Giroud: 5.00</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Inter vs Napoli</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1: 2.00 – X: 3.30 – 2: 3.60</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.70</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">2.05</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.80</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.95</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Lautaro: 4.50</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+          <td style="padding: 10px; border: 1px solid #ddd;">Roma vs Lazio</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1: 2.20 – X: 3.20 – 2: 3.10</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.95</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.80</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">1.85</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">2.00</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Immobile: 5.20</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <p class="text">
+    Nelle scommesse sportive esistono diverse tipologie di giocate. La più comune è la <strong>1X2</strong>, dove si
+    scommette sull'esito finale della partita (vittoria della squadra di casa, pareggio o vittoria della squadra
+    ospite).
+    L'<strong>Over/Under 2.5</strong> riguarda il numero totale di gol: "Over 2.5" significa che nella partita si
+    prevedono almeno 3 gol, "Under 2.5" che ci saranno al massimo 2 gol. La scommessa <strong>Gol/No Gol</strong>
+    indica se entrambe le squadre segneranno almeno un gol o meno. Infine, la giocata sul <strong>Primo
+      Marcatore</strong>
+    consente di scommettere su chi segnerà il primo gol della partita. Queste opzioni rendono le scommesse più
+    variegate,
+    ma aumentano anche il rischio di perdere, specialmente se non si scommette in modo consapevole.
+  </p>
+
+  <h2 class="title">Siti più usati per giocare online</h2>
+  <p class="text">
+    Oggi esistono numerosi portali dove è possibile effettuare scommesse sportive online in modo legale e regolamentato.
+    Tra i più conosciuti troviamo <a href="https://www.planetwin365.it" target="_blank"
+      style="color: #007bff; text-decoration: none;">Planetwin365</a>,
+    <a href="https://www.snai.it" target="_blank" style="color: #007bff; text-decoration: none;">Snai</a>,
+    <a href="https://www.goldbet.it" target="_blank" style="color: #007bff; text-decoration: none;">Goldbet</a> e
+    <a href="https://www.sisal.it" target="_blank" style="color: #007bff; text-decoration: none;">Sisal</a>.
+    Tutti questi operatori offrono piattaforme digitali intuitive per piazzare scommesse su eventi sportivi nazionali e
+    internazionali,
+    con numerose tipologie di giocate disponibili. Tuttavia, è fondamentale ricordare che il gioco è vietato ai minori
+    di 18 anni e può causare dipendenza.
+    Gioca solo su siti autorizzati ADM (Agenzia delle Dogane e dei Monopoli) e in modo responsabile.
+  </p>
+
+
+
+
+
+
+
+  <footer class="footer-style">
+    <p>&copy;</p>
+    <p>Nome e Cognome: Lorenzo Mangia</p>
+    <p>Classe: 4D</p>
+    <p>Sezione: Informatica</p>
+    <p>Email: lorenzomangia16@gmail.com</p>
+  </footer>
+
+  <!-- JavaScript per il carosello -->
+  <script>
+    let index = 0;
+    let slideInterval;
+
+    function showSlide(indexToShow) {
+      const slide = document.getElementById("carouselSlide");
+      const totalSlides = slide.children.length;
+
+      if (indexToShow < 0) {
+        index = totalSlides - 1;
+      } else if (indexToShow >= totalSlides) {
+        index = 0;
+      } else {
+        index = indexToShow;
+      }
+
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(() => {
+        nextSlide();
+      }, 3000); // Cambia slide ogni 3 secondi
+    }
+
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlide(0);
+      startAutoSlide();
+
+      // Interrompe l'autoplay se l'utente usa i pulsanti
+      document.querySelector(".prev").addEventListener("click", () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+      });
+      document.querySelector(".next").addEventListener("click", () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+    });
+    let textIndex = 0;
+    let textSlideInterval;
+
+    function showTextSlide(indexToShow) {
+      const track = document.getElementById("textCarouselTrack");
+      const total = track.children.length;
+
+      if (indexToShow < 0) {
+        textIndex = total - 1;
+      } else if (indexToShow >= total) {
+        textIndex = 0;
+      } else {
+        textIndex = indexToShow;
+      }
+
+      track.style.transform = `translateX(-${textIndex * 100}%)`;
+    }
+
+    function nextTextSlide() {
+      showTextSlide(textIndex + 1);
+    }
+
+    function prevTextSlide() {
+      showTextSlide(textIndex - 1);
+    }
+
+    function startAutoTextSlide() {
+      textSlideInterval = setInterval(() => {
+        nextTextSlide();
+      }, 4000);
+    }
+
+    function stopAutoTextSlide() {
+      clearInterval(textSlideInterval);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showTextSlide(0);
+      startAutoTextSlide();
+
+      const buttons = document.querySelectorAll(".text-carousel-nav button");
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          stopAutoTextSlide();
+          startAutoTextSlide();
+        });
+      });
+    });
+
+  </script>
+
+
 
 
 </body>
